@@ -23,7 +23,7 @@ export default function Home() {
             loop
             className="text-md lg:text-xl text-[#d6aa52]"
           />
-          <p className="text-md lg:text-lg leading-8">
+          <p className="text-sm md:text-lg leading-8">
             {'>'} As a software engineer, my passion lies in creating practical
             \ <br />
             {'>'} solutions for real-life problems. I possess a deep enthusiasm
