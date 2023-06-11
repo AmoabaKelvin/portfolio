@@ -29,7 +29,7 @@ export default function Footer() {
   });
 
   return (
-    <div className="flex justify-between items-center border-t border-gray-600 h-10 fixed bottom-0 w-full">
+    <div className="flex justify-between items-center border-t border-gray-600 h-10 sticky bottom-0 w-full">
       {/* Social Media Links */}
       <div className="flex items-center h-full">
         <p className="hidden border-r border-gray-600 h-full md:flex justify-center items-center px-2">
