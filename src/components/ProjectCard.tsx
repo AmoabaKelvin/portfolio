@@ -1,31 +1,50 @@
-import React from 'react';
-import { FaGithub, FaPython, FaNodeJs } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import { TbWorldWww } from 'react-icons/tb';
 
-const ProjectCard = () => {
+interface portfolioProjectType {
+  id: number;
+  image?: string;
+  title: string;
+  description: string;
+  link?: string;
+  github: string;
+  stack: any[];
+}
+
+const ProjectCard = (props: portfolioProjectType) => {
   return (
-    <div className="border rounded glare glow">
+    <div className="flex flex-col border rounded glare glow">
       <div className="p-4">
-        <div className="flex justify-between items-center">
-          <span>Project Name</span>
-          <div className="space-x-2 flex">
-            <FaGithub className="text-2xl text-gray-500 cursor-pointer hover:text-gray-600" />
-            <TbWorldWww className="text-2xl text-gray-500 cursor-pointer hover:text-gray-600" />
+        <div className="flex items-center justify-between">
+          <span>{props.title}</span>
+          <div className="flex space-x-2">
+            {/* Use an anchor tag and place the icon in them, because they will lead somewhere */}
+            <a href={props.github} target="_blank" rel="noreferrer">
+              <FaGithub className="text-2xl text-gray-500 cursor-pointer hover:text-gray-600" />
+            </a>
+            {props.link && (
+              <a href={props.link} target="_blank" rel="noreferrer">
+                <TbWorldWww className="text-2xl text-gray-500 cursor-pointer hover:text-gray-600" />
+              </a>
+            )}
           </div>
         </div>
-        <div className="bg-gray-800 rounded p-4 mt-2 glare">
+        <div className="p-4 mt-2 bg-gray-800 rounded glare">
           <p className="text-white">
-            <p className="text-sm text-slate-400 mb-1">$ description.sh</p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            voluptatum, quibusdam, quia, quos voluptates voluptatibus
-            consequatur voluptate voluptas voluptatem quod doloribus. Quisquam
-            voluptatum, quibusdam, quia, quos voluptates voluptatibus
+            <p className="mb-1 text-sm text-slate-400">$ description.sh</p>
+            {props.description}
           </p>
           <div className="glare"></div>
         </div>
         <div className="flex items-center mt-4 space-x-2">
-          <FaPython className="text-2xl text-gray-500 cursor-pointer hover:text-gray-600" />
-          <FaNodeJs className="text-2xl text-gray-500 cursor-pointer hover:text-gray-600" />
+          {props.stack.map((Item, index) => (
+            // <FaPython className="text-2xl text-gray-500 cursor-pointer hover:text-gray-600" />
+            // <FaNodeJs className="text-2xl text-gray-500 cursor-pointer hover:text-gray-600" />
+            <Item
+              className="text-2xl text-gray-500 cursor-pointer hover:text-gray-600"
+              key={index}
+            />
+          ))}
         </div>
       </div>
     </div>
