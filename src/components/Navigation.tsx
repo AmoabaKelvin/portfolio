@@ -6,9 +6,7 @@
 // will be yellow as well. The inactive tabs will be white with black
 // They will have borders on the left and right side of the tab.
 'use client';
-import React from 'react';
-import { usePathname } from 'next/navigation';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 interface TabProps {
   path: string;
@@ -39,10 +37,9 @@ function Tab({ path, name }: TabProps) {
 
 export default function Navigation() {
   return (
-    <div className="flex border-t border-b border-gray-600 h-8 items-center bg-gray-950 border-b-gray-900">
+    <div className="flex items-center h-8 border-t border-b border-gray-600 bg-gray-950 border-b-gray-900">
       {/* Tabs */}
       <Tab path="/" name="_hello" />
-      <Tab path="/about" name="_about" />
       <Tab path="/projects" name="_projects" />
       <Tab path="/contact" name="_contact" />
     </div>
