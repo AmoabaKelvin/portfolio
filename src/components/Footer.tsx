@@ -1,8 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { IconType } from 'react-icons';
-import { FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 
 const getFormattedDate = () => {
   return new Date().toLocaleString('en-US', {
@@ -29,10 +29,10 @@ export default function Footer() {
   });
 
   return (
-    <div className="flex justify-between items-center border-t border-gray-600 h-10 sticky bottom-0 w-full">
+    <div className="sticky bottom-0 flex items-center justify-between w-full h-10 border-t border-gray-600 bg-gray-950">
       {/* Social Media Links */}
       <div className="flex items-center h-full">
-        <p className="hidden border-r border-gray-600 h-full md:flex justify-center items-center px-2">
+        <p className="items-center justify-center hidden h-full px-2 border-r border-gray-600 md:flex">
           Find me on:
         </p>
         <FooterTab Icon={FaLinkedinIn} href="https://github.com" />
