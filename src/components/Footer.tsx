@@ -35,9 +35,12 @@ export default function Footer() {
         <p className="items-center justify-center hidden h-full px-2 border-r border-gray-600 md:flex">
           Find me on:
         </p>
-        <FooterTab Icon={FaLinkedinIn} href="https://github.com" />
-        <FooterTab Icon={FaTwitter} href="https://github.com" />
-        <FooterTab Icon={FaGithub} href="https://github.com" />
+        <FooterTab
+          Icon={FaLinkedinIn}
+          href="https://www.linkedin.com/in/kelvin-amoaba/"
+        />
+        <FooterTab Icon={FaTwitter} href="https://twitter.com/kelamoaba" />
+        <FooterTab Icon={FaGithub} href="https://github.com/AmoabaKelvin" />
       </div>
 
       {/* Current Date */}
@@ -55,8 +58,10 @@ interface FooterTabProps {
 
 const FooterTab = ({ Icon, href }: FooterTabProps) => {
   return (
-    <div className="text-center border-r border-gray-600 h-full flex justify-center items-center hover:cursor-pointer transition-all duration-300 w-10 hover:bg-[#d6aa52] hover:text-white">
-      <Icon />
-    </div>
+    <a href={href} target="_blank" rel="noreferrer" className="h-full">
+      <div className="text-center border-r border-gray-600 h-full flex justify-center items-center hover:cursor-pointer transition-all duration-300 w-10 hover:bg-[#d6aa52] hover:text-white">
+        <Icon />
+      </div>
+    </a>
   );
 };
