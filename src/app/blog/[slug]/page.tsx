@@ -7,7 +7,10 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDarkReasonable } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 const getPostContent = async (slug: string) => {
-  const singlePost = fs.readFileSync(`./src/posts/${slug}.md`, 'utf-8');
+  const singlePost = fs.readFileSync(
+    process.cwd() + `/src/posts/${slug}.md`,
+    'utf-8'
+  );
   const parsedSinglePost = matter(singlePost);
 
   return {
