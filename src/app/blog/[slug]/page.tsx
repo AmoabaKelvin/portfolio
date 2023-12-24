@@ -4,6 +4,7 @@ import BackButton from './back-button';
 
 import matter from 'gray-matter';
 import { Metadata, ResolvingMetadata } from 'next';
+import Script from 'next/script';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDarkReasonable } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
@@ -103,6 +104,24 @@ const BlogDetailPage = async ({ params }: Props) => {
         >
           {postContent.content}
         </Markdown>
+
+        <Script
+          src="https://giscus.app/client.js"
+          data-repo="AmoabaKelvin/blog"
+          data-repo-id="R_kgDOK9FHvA"
+          data-category="Announcements"
+          data-category-id="DIC_kwDOK9FHvM4Cb-MF"
+          data-mapping="url"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="en"
+          crossOrigin="anonymous"
+          data-loading="lazy"
+          async
+        />
       </div>
     </div>
   );
