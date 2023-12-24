@@ -1,10 +1,6 @@
-import { JetBrains_Mono } from 'next/font/google';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-import Navigation from '../components/Navigation';
+import { GeistMono } from 'geist/font/mono';
+import Link from 'next/link';
 import './globals.css';
-
-const jetBrainsMono = JetBrains_Mono({ weight: '400', subsets: ['latin'] });
 
 export const metadata = {
   title: 'Kelvin Amoaba',
@@ -18,13 +14,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={jetBrainsMono.className}>
-        <Header />
-        <Navigation />
+    <html lang="en" className={GeistMono.className}>
+      <body>
+        <div className="flex justify-between">
+          <div className="flex items-center justify-center w-10 h-10 m-4 border-2 border-white ">
+            <p>KA</p>
+          </div>
+
+          <div className="flex items-center justify-center h-10 px-3 m-4 border-2 border-white ">
+            <Link href="https://drive.google.com/file/d/1YPp-Dc4izII1kKv0PbwoDk30pINhKKVT/view?usp=sharing">
+              Resume
+            </Link>
+          </div>
+        </div>
+
         <main className="h-full min-h-screen">{children}</main>
-        <Footer />
       </body>
+      <footer className="flex items-center justify-center w-full h-10 mt-20 text-sm text-gray-400 ">
+        <p>
+          © {new Date().getFullYear()} {'  '}
+          Kelvin Amoaba
+        </p>
+      </footer>
     </html>
   );
 }
