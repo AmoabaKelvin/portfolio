@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 html {
-  @apply text-gray-400;
-  @apply bg-gray-900;
+  @apply text-white;
+  /* @apply bg-gray-900; */
+  @apply bg-black;
 }
 
 body {
