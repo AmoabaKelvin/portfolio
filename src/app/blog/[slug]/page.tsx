@@ -3,8 +3,46 @@ import Markdown from 'react-markdown';
 import BackButton from './back-button';
 
 import matter from 'gray-matter';
+import { Metadata, ResolvingMetadata } from 'next';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDarkReasonable } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
+interface Props {
+  params: {
+    slug: string;
+  };
+}
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const blogSlug = params.slug;
+
+  const blogPost = await getPostContent(blogSlug);
+
+  return {
+    title: blogPost.title,
+    openGraph: {
+      images: [blogPost.cover],
+    },
+    authors: [
+      {
+        name: 'Kelvin Amoaba',
+        url: 'https://kelvinamoaba.live',
+      },
+    ],
+    keywords: [...blogPost.tags],
+    creator: 'Kelvin Amoaba',
+    description: blogPost.content
+      .replace(/<[^>]*>/g, '')
+      // remove #, ##, ###, etc
+      .replace(/#+\s/g, '')
+      .replace(/\n/g, ' ')
+      .replace(/\s+/g, ' ')
+      .substring(0, 200),
+  };
+}
 
 const getPostContent = async (slug: string) => {
   const singlePost = fs.readFileSync(
@@ -18,10 +56,11 @@ const getPostContent = async (slug: string) => {
     title: parsedSinglePost.data.title,
     date: parsedSinglePost.data.datePublished,
     cover: parsedSinglePost.data.cover,
+    tags: parsedSinglePost.data.tags,
   };
 };
 
-const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
+const BlogDetailPage = async ({ params }: Props) => {
   const postContent = await getPostContent(params.slug);
 
   return (
