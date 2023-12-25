@@ -5,7 +5,8 @@
 html {
   @apply text-white;
   /* @apply bg-gray-900; */
-  @apply bg-black;
+  /* @apply bg-black; */
+  background-color: #222426;
 }
 
 body {
