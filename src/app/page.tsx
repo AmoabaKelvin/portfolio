@@ -103,10 +103,11 @@ export default async function Home() {
               <div className="flex flex-col gap-1" key={project.name}>
                 <p className="text-sm text-gray-400">
                   <Link href={project.link} target="_blank">
-                    <span className="text-white hover:underline underline-offset-4">
-                      {project.name}:
+                    <span className="text-white underline underline-offset-4">
+                      {project.name}
                     </span>
                   </Link>
+                  :
                   <span className="ml-2 text-sm text-gray-400">
                     {project.description}
                   </span>
