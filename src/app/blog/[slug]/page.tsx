@@ -76,10 +76,15 @@ const BlogDetailPage = async ({ params }: Props) => {
       </div>
 
       {postContent.cover && (
-        <img src={postContent.cover} className="mt-10 rounded-md" />
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={postContent.cover}
+          className="mt-10 rounded-md"
+          alt={postContent.title}
+        />
       )}
 
-      <div className="max-w-3xl mt-10 leading-7 prose dark:prose-invert">
+      <div className="max-w-3xl mt-10 font-light leading-8 prose dark:prose-invert">
         <Markdown
           components={{
             code({ node, className, children, ...props }) {
