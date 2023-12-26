@@ -1,12 +1,16 @@
 import { Analytics } from '@vercel/analytics/react';
 import { GeistMono } from 'geist/font/mono';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import './globals.css';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Kelvin Amoaba',
   description:
-    'Portfolio of Kelvin Amoaba, a software engineer based with amazing intellect for building amazing apps',
+    'I am Kelvin Amoaba, a software engineer obsessed with building products that solve real-world problems and understanding low-level systems.',
+  openGraph: {
+    images: ['https://i.imgur.com/mkixaLE.png'],
+  },
 };
 
 export default function RootLayout({
