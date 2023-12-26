@@ -1,3 +1,4 @@
+import ProjectCard from '@/components/project-card';
 import { projects } from '@/projects';
 import fs from 'fs';
 import matter from 'gray-matter';
@@ -100,19 +101,20 @@ export default async function Home() {
           <p className="text-3xl font-bold">projects</p>
           <div className="flex flex-col gap-5 mt-2">
             {projects.map((project) => (
-              <div className="flex flex-col gap-1" key={project.name}>
-                <p className="text-sm text-gray-400">
-                  <Link href={project.link} target="_blank">
-                    <span className="text-white underline underline-offset-4">
-                      {project.name}
-                    </span>
-                  </Link>
-                  :
-                  <span className="ml-2 text-sm text-gray-400">
-                    {project.description}
-                  </span>
-                </p>
-              </div>
+              // <div className="flex flex-col gap-1" key={project.name}>
+              //   <p className="text-sm text-gray-400">
+              //     <Link href={project.link} target="_blank">
+              //       <span className="text-white underline underline-offset-4">
+              //         {project.name}
+              //       </span>
+              //     </Link>
+              //     :
+              //     <span className="ml-2 text-sm text-gray-400">
+              //       {project.description}
+              //     </span>
+              //   </p>
+              // </div>
+              <ProjectCard project={project} key={project.name} />
             ))}
           </div>
         </div>
