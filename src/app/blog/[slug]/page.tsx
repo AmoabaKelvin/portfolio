@@ -84,7 +84,7 @@ const BlogDetailPage = async ({ params }: Props) => {
         />
       )}
 
-      <div className="max-w-3xl mt-10 font-light leading-8 prose dark:prose-invert">
+      <div className="max-w-3xl mt-10 leading-8 prose text-white dark:prose-invert">
         <Markdown
           components={{
             code({ node, className, children, ...props }) {
