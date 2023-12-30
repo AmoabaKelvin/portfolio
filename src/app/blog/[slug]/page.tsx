@@ -125,6 +125,14 @@ const BlogDetailPage = async ({ params }: Props) => {
             strong({ node, ...props }) {
               return <strong className="text-yellow-500" {...props} />;
             },
+            // change color of italic text
+            em({ node, ...props }) {
+              return <em className="text-yellow-500" {...props} />;
+            },
+            // change color of links
+            a({ node, ...props }) {
+              return <a className="text-yellow-500" {...props} />;
+            },
           }}
         >
           {postContent.content}
