@@ -105,6 +105,26 @@ const BlogDetailPage = async ({ params }: Props) => {
                 </code>
               );
             },
+            // change color of headings
+            h1({ node, ...props }) {
+              return <h1 className="text-yellow-500" {...props} />;
+            },
+            h2({ node, ...props }) {
+              return <h2 className="text-yellow-500" {...props} />;
+            },
+            h3({ node, ...props }) {
+              return <h3 className="text-yellow-500" {...props} />;
+            },
+            h4({ node, ...props }) {
+              return <h4 className="text-yellow-500" {...props} />;
+            },
+            h5({ node, ...props }) {
+              return <h5 className="text-yellow-500" {...props} />;
+            },
+            // change color of bold text
+            strong({ node, ...props }) {
+              return <strong className="text-yellow-500" {...props} />;
+            },
           }}
         >
           {postContent.content}
