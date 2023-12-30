@@ -17,11 +17,9 @@ const readBlogPostsFromFolder = async (): Promise<
   });
 
   const sortedBlogPosts = parsedMdFiles.sort((a, b) => {
-    if (a.data.datePublished < b.data.datePublished) {
-      return 1;
-    } else {
-      return -1;
-    }
+    const dateA = new Date(a.data.datePublished);
+    const dateB = new Date(b.data.datePublished);
+    return dateB.getTime() - dateA.getTime();
   });
 
   return sortedBlogPosts.map((post) => {
