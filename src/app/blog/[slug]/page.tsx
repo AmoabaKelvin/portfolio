@@ -4,7 +4,6 @@ import BackButton from './back-button';
 
 import matter from 'gray-matter';
 import { Metadata, ResolvingMetadata } from 'next';
-import Script from 'next/script';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDarkReasonable } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
@@ -138,7 +137,7 @@ const BlogDetailPage = async ({ params }: Props) => {
           {postContent.content}
         </Markdown>
 
-        <Script
+        {/* <Script
           src="https://giscus.app/client.js"
           data-repo="AmoabaKelvin/blog"
           data-repo-id="R_kgDOK9FHvA"
@@ -154,7 +153,7 @@ const BlogDetailPage = async ({ params }: Props) => {
           crossOrigin="anonymous"
           data-loading="lazy"
           async
-        />
+        /> */}
       </div>
     </div>
   );
