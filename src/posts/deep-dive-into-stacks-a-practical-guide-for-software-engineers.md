@@ -1,6 +1,6 @@
 ---
 title: "Deep Dive into Stacks: A Practical Guide for Software Engineers"
-datePublished: Thu Nov 09 2023 19:40:19 GMT+0000 (Coordinated Universal Time)
+datePublished: 2023-11-09T19:40:19.000Z
 cuid: clorlftng00080al9bet2h31w
 slug: deep-dive-into-stacks-a-practical-guide-for-software-engineers
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/wstYTyWtGac/upload/d1ae6fdfc834744111ba65a912501eb4.jpeg
