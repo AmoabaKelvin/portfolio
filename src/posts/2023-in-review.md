@@ -3,12 +3,12 @@ title: "2023 in Review"
 seoTitle: "My 2023 in Review"
 datePublished: 2023-12-30T01:05:07.341Z
 slug: 2023-in-review
-cover: https://i.imgur.com/MM8hnFu.png
+cover: https://res.cloudinary.com/dphleco2s/image/upload/v1703933385/White_Sunset_Blog_Banner_iqzlpk.png
 tags: 2023, review, year, goals, resolutions
 ---
 
 ### What a great start 🏎️
-2023 was a year that I cannot be more proud of. The year started on a really great note, I was able to secure a job as a Software Engineer at a really great company, [Vela Partners](https://vela.partners) through a referral by a really great friend of mine. I cannot overstate the value of having wonderful friends and a good network. I am forever grateful to him for this opportunity.
+2023 was a year that I cannot be more proud of. The year started on a really great note, I was able to secure a job as a Software Engineer at a really great company through a referral by a really great friend of mine. I cannot overstate the value of having wonderful friends and a good network. I am forever grateful to him for this opportunity.
 
 
 ### The goal: Striving for Mastery
