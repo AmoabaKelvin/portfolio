@@ -9,10 +9,10 @@ tags: frontend, web-development, programming, software-engineering
 
 I recently got the chance to work with some individuals on a project. Most of the open source 
 contributions I've done did not really have a specific set of designs to follow, 
-so each contributor had to hack their way into building somethign that at the end, will be appealing. That was very easy and straight to the point so it was a lot of fun.
+so each contributor had to hack their way into building something that at the end, will be appealing. That was very easy and straight to the point so it was a lot of fun.
 
 This time around, I had to work with a team of designers and other developers to build a project.
-The designs weren't really complex but I managed to mess up a lot of things. Just like my other contributions, _I tried to get many things things done and in a short time_. This made me make a lot of mistakes that sometimes made me feel soo stupid when they are brought forth by the designers and other developers. The period of working with these people made me realize that it is not all about getting things done swiftly but also ensuring you get them done correctly.
+The designs weren't really complex but I managed to mess up a lot of things. Just like my other contributions, _I tried to get many things things done and in a short time_. This made me make a lot of mistakes that sometimes made me feel soo stupid when they were brought forth by the designers and other developers. The period of working with these people made me realize that it is not all about getting things done swiftly but also ensuring you get them done correctly.
 
 You see, User Interfaces are not like backend APIs or SQL queries that are mostly not device specific. Once you write your select statement correctly, it will work on any database. Once you write your API correctly, it will work for any device that requests for it correctly, I mean, you get the point. But then, this is not the case with UIs. You have to ensure that your UI works on all devices and that it looks the same on all devices. This is where the problem lies. _Measurements are very different here and there can be several different measurements for different devices, so you have to ensure that you get the measurements right and also getting the interactions right_. (I mean, think about the number of android devices out there, you have to ensure that your UI works on all of them 😅).  
 
