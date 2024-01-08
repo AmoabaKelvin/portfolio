@@ -4,6 +4,7 @@ import BackButton from './back-button';
 
 import matter from 'gray-matter';
 import { Metadata, ResolvingMetadata } from 'next';
+import Script from 'next/script';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDarkReasonable } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
@@ -83,7 +84,7 @@ const BlogDetailPage = async ({ params }: Props) => {
         />
       )}
 
-      <div className="max-w-3xl mt-10 font-light leading-8 prose text-white/90 dark:prose-invert">
+      <div className="max-w-3xl mt-10 space-y-10 font-light leading-8 prose text-white/90 dark:prose-invert">
         <Markdown
           components={{
             code({ node, className, children, ...props }) {
@@ -137,7 +138,7 @@ const BlogDetailPage = async ({ params }: Props) => {
           {postContent.content}
         </Markdown>
 
-        {/* <Script
+        <Script
           src="https://giscus.app/client.js"
           data-repo="AmoabaKelvin/blog"
           data-repo-id="R_kgDOK9FHvA"
@@ -153,7 +154,7 @@ const BlogDetailPage = async ({ params }: Props) => {
           crossOrigin="anonymous"
           data-loading="lazy"
           async
-        /> */}
+        />
       </div>
     </div>
   );
