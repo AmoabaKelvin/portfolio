@@ -1,5 +1,5 @@
 ---
-title: "Paying Attention to Details As a Frontend Developer"
+title: "Paying Attention to Details As a Developer"
 datePublished: 2024-01-07T23:16:39.778Z
 slug: paying-attention-to-details
 cover: https://images.unsplash.com/photo-1579019874729-ffca9e9fe11c?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
