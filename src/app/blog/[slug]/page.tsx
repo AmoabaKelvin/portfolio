@@ -100,7 +100,7 @@ const BlogDetailPage = async ({ params }: Props) => {
                   </SyntaxHighlighter>
                 </div>
               ) : (
-                <code className={className} {...props}>
+                <code className={className + ' text-white'} {...props}>
                   {children}
                 </code>
               );
