@@ -3,7 +3,7 @@ export const projects = [
     name: 'iShortn',
     link: 'https://ishortn.ink',
     description:
-      'A dynamic links and url shortener and QR code generator. Built as a result of firebase shutting down their dynamic links service and other alternatives being too expensive. Now have 30+ users and over 200 daily uses.',
+      'A dynamic links and url shortener and QR code generator. Built as a result of firebase shutting down their dynamic links service and other alternatives being too expensive. Now have 130+ users and over 2000 daily uses.',
   },
   {
     name: 'Bazaar',
