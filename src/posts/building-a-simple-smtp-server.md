@@ -25,4 +25,15 @@ To actually understand the keywords and the various subtle workings of smtp by b
 
 There are other important factors that need to be considered to actually build a really solid smtp server. Since this is mostly a basic overview, detailed insights into protecting your mail server and meeting other necessary criteria have not been covered.
 
-In the next post, we will be looking at how to build a simple smtp server using python and the `sockets` library. Stay tuned for that.
+In the next post, we will be looking at how to build a simple smtp server using python and the `sockets` library. Stay tuned for that, but then to ensure we are on the same page, you can read up on the SMTP RFCs to get a better understanding of how the protocol works. 
+
+### Resources
+- [SMTP RFC](https://tools.ietf.org/html/rfc5321)
+- [SMTP Commands](https://www.geeksforgeeks.org/smtp-commands/)
+- [SMTP Status Codes](https://en.wikipedia.org/wiki/List_of_SMTP_server_return_codes)
+- [SMTP Overview](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol)
+- [SMTP Relay](https://en.wikipedia.org/wiki/Email_relay)
+- [Zone Files](https://en.wikipedia.org/wiki/Zone_file)
+- [MX Records](https://en.wikipedia.org/wiki/MX_record)
+- [Python Sockets](https://docs.python.org/3/library/socket.html)
+- [Mailgun](https://www.mailgun.com/)
