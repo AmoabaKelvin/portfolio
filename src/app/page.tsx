@@ -1,11 +1,12 @@
-import ProjectCard from '@/components/project-card';
-import { projects } from '@/projects';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import { FaDev, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { FaHashnode } from 'react-icons/fa6';
 import { IoMailOpen } from 'react-icons/io5';
+
+import ProjectCard from '@/components/project-card';
+import { projects } from '@/projects';
 
 const readBlogPostsFromFolder = async (): Promise<
   { title: string; date: Date; slug: string }[]
@@ -80,11 +81,17 @@ export default async function Home() {
             {blogPosts.map((post) => (
               <div className="flex flex-col gap-1" key={post.title}>
                 <p className="text-sm">
-                  <span className="text-gray-400">
-                    {new Date(post.date).toLocaleDateString('en-US')}:{' '}
+                  <span className="font-light text-gray-400 -tracking-widest">
+                    {/* the date should be like Month DayNum Year */}
+                    {new Date(post.date).toLocaleDateString('en-US', {
+                      month: 'short',
+                      day: 'numeric',
+                      year: 'numeric',
+                    })}
+                    : {'  '}
                   </span>
                   <Link href={`/blog/${post.slug}`}>
-                    <span className="text-white hover:underline underline-offset-4 hover:cursor-pointer">
+                    <span className="text-white hover:underline underline-offset-4 hover:cursor-pointer text-md">
                       {post.title}
                     </span>
                   </Link>
