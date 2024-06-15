@@ -1,8 +1,9 @@
+import './globals.css';
+
 import { Analytics } from '@vercel/analytics/react';
 import { GeistMono } from 'geist/font/mono';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Kelvin Amoaba',
@@ -38,7 +39,10 @@ export default function RootLayout({
           <Analytics />
         </main>
       </body>
-      <footer className="flex items-center justify-center w-full h-10 mt-20 text-sm text-gray-400 ">
+      <footer
+        className="flex items-center justify-center w-full h-10 mt-20 text-sm text-gray-400 "
+        suppressHydrationWarning
+      >
         <p>
           © {new Date().getFullYear()} {'  '}
           Kelvin Amoaba
