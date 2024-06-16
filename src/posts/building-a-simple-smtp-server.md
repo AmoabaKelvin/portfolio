@@ -9,7 +9,7 @@ tags: smtp, server, email, protocol, simple
 
 ### What does it mean to write your own smtp server
 
-Writing your own SMTP server basically means that you go by the SMTP RFCSs and make sure that your system responds appropriately to whatever commands that come in from other mail servers. Under the hood, smtp servers are doing the same things with slight modifications but the fundamentals all stick to the SMTP RFCs proposed.
+Writing your own SMTP server basically means that you go by the SMTP RFCs and make sure that your system responds appropriately to whatever commands that come in from other mail servers. Under the hood, smtp servers are doing the same things with slight modifications but the fundamentals all stick to the SMTP RFCs proposed.
 
 So writing a simple mail server means that your server has to run on the appropriate port of SMTP, mostly `25` (these are all well-known ports and should not be changed without reason) and also accept and respond with the appropriate status codes for each and every request that comes to play. Example, if the sending mail server sends the command `helo`, you must know that the right thing to do is respond with the `250 OK` code which is mostly the standard response.. 
 
