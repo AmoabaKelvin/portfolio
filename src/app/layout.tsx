@@ -27,11 +27,11 @@ export default function RootLayout({
             <p>KA</p>
           </div>
 
-          <div className="flex items-center justify-center h-10 px-3 m-4 border-2 border-white ">
+{/*           <div className="flex items-center justify-center h-10 px-3 m-4 border-2 border-white ">
             <Link href="https://drive.google.com/file/d/1YPp-Dc4izII1kKv0PbwoDk30pINhKKVT/view?usp=sharing">
               Resume
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <main className="h-full min-h-screen">
