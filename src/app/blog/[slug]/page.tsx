@@ -1,23 +1,24 @@
-import fs from 'fs';
-import Markdown from 'react-markdown';
-import BackButton from './back-button';
+import fs from "fs";
+import matter from "gray-matter";
+import { Metadata, ResolvingMetadata } from "next";
+import Script from "next/script";
+import Markdown from "react-markdown";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
-import matter from 'gray-matter';
-import { Metadata, ResolvingMetadata } from 'next';
-import Script from 'next/script';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneDarkReasonable } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import BackButton from "./back-button";
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateMetadata(
-  { params }: Props,
+  props: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
+  const params = await props.params;
   const blogSlug = params.slug;
 
   const blogPost = await getPostContent(blogSlug);
@@ -61,20 +62,19 @@ const getPostContent = async (slug: string) => {
   };
 };
 
-const BlogDetailPage = async ({ params }: Props) => {
+const BlogDetailPage = async (props0: Props) => {
+  const params = await props0.params;
   const postContent = await getPostContent(params.slug);
 
   return (
-    <div className="max-w-3xl px-5 mx-auto">
+    <div className="px-5 mx-auto max-w-3xl">
       <BackButton className="mt-10" />
-
       <div className="mt-10 text-xl font-bold md:text-3xl">
         {postContent.title}
       </div>
       <div className="mt-2 text-sm text-gray-400">
         Kelvin Amoaba • {new Date(postContent.date).toLocaleDateString()}
       </div>
-
       {postContent.cover && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
@@ -83,14 +83,13 @@ const BlogDetailPage = async ({ params }: Props) => {
           alt={postContent.title}
         />
       )}
-
-      <div className="max-w-3xl mt-10 space-y-10 font-light leading-8 prose text-white/90 dark:prose-invert">
+      <div className="mt-10 space-y-10 max-w-3xl font-light leading-8 prose text-white/90 dark:prose-invert">
         <Markdown
           components={{
             code({ node, className, children, ...props }) {
               const match = /language-(\w+)/.exec(className || '');
               return match ? (
-                <div className="w-full overflow-hidden rounded-md">
+                <div className="overflow-hidden w-full rounded-md">
                   <SyntaxHighlighter
                     style={atomOneDarkReasonable}
                     language={match[1]}
@@ -113,7 +112,7 @@ const BlogDetailPage = async ({ params }: Props) => {
               return <h2 className="text-yellow-500" {...props} />;
             },
             h3({ node, ...props }) {
-              return <h3 className="text-yellow-500" {...props} />;
+              return <h3 className="mb-0 text-yellow-500" {...props} />;
             },
             h4({ node, ...props }) {
               return <h4 className="text-yellow-500" {...props} />;
@@ -123,15 +122,24 @@ const BlogDetailPage = async ({ params }: Props) => {
             },
             // change color of bold text
             strong({ node, ...props }) {
-              return <strong className="text-yellow-500" {...props} />;
+              return <strong className="font-bold text-white" {...props} />;
             },
             // change color of italic text
             em({ node, ...props }) {
               return <em className="text-yellow-500" {...props} />;
             },
+
+            blockquote({ node, ...props }) {
+              return <blockquote className="text-yellow-500" {...props} />;
+            },
             // change color of links
             a({ node, ...props }) {
               return <a className="text-yellow-500" {...props} />;
+            },
+
+            // remove background color in pre tags
+            pre({ node, ...props }) {
+              return <pre className="p-0 bg-transparent" {...props} />;
             },
           }}
         >

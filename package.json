@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -11,22 +11,22 @@
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@types/node": "20.2.6",
-    "@types/react": "18.2.9",
-    "@types/react-dom": "18.2.4",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3",
     "@types/react-syntax-highlighter": "^15.5.11",
     "@vercel/analytics": "^1.1.1",
     "autoprefixer": "10.4.14",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "eslint": "8.42.0",
-    "eslint-config-next": "latest",
+    "eslint-config-next": "15.1.7",
     "geist": "^1.2.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.302.0",
-    "next": "latest",
+    "next": "15.1.7",
     "postcss": "8.4.24",
-    "react": "latest",
-    "react-dom": "latest",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-icons": "^4.9.0",
     "react-markdown": "^9.0.1",
     "react-syntax-highlighter": "^15.5.0",
@@ -36,5 +36,9 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10"
+  },
+  "overrides": {
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3"
   }
 }
