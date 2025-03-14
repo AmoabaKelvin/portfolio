@@ -35,9 +35,9 @@ const readBlogPostsFromFolder = async (): Promise<
 export default async function Home() {
   const blogPosts = await readBlogPostsFromFolder();
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="mx-auto max-w-3xl">
       <main className="flex flex-col px-5 py-2 md:px-10">
-        <div className="flex flex-col justify-center gap-2 mt-20">
+        <div className="flex flex-col gap-2 justify-center mt-20">
           <p className="text-4xl font-extrabold">Kelvin Amoaba</p>
           <p className="mt-1">
             <span className="mr-2">🇬🇭</span>• software engineer • writer
@@ -51,7 +51,7 @@ export default async function Home() {
             </p>
           </div>
           {/* social media icons, next to each other, gh, twitter, linkedin, hashnode, devto */}
-          <div className="flex items-center gap-4 mt-2">
+          <div className="flex gap-4 items-center mt-2">
             <a href="https://github.com/AmoabaKelvin" target="_blank">
               <FaGithub size={21} />
             </a>
@@ -71,7 +71,7 @@ export default async function Home() {
               <IoMailOpen size={21} />
             </a>
           </div>
-          <div className="w-20 h-1 mx-auto my-10 border-t border-gray-400"></div>
+          <div className="mx-auto my-10 w-20 h-1 border-t border-gray-400"></div>
         </div>
 
         {/* writings */}
@@ -106,19 +106,6 @@ export default async function Home() {
           <p className="text-3xl font-bold">projects</p>
           <div className="flex flex-col gap-5 mt-2">
             {projects.map((project) => (
-              // <div className="flex flex-col gap-1" key={project.name}>
-              //   <p className="text-sm text-gray-400">
-              //     <Link href={project.link} target="_blank">
-              //       <span className="text-white underline underline-offset-4">
-              //         {project.name}
-              //       </span>
-              //     </Link>
-              //     :
-              //     <span className="ml-2 text-sm text-gray-400">
-              //       {project.description}
-              //     </span>
-              //   </p>
-              // </div>
               <ProjectCard project={project} key={project.name} />
             ))}
           </div>
