@@ -24,7 +24,7 @@ const ProjectCard = ({ project }: Props) => {
             </span>
           </Link>
           :
-          <span className="ml-2 text-sm text-gray-400">
+          <span className="ml-2 leading-6 text-gray-400">
             {project.description}
           </span>
         </p>
