@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://kelvinamoaba.live/sitemap.xml',
+    sitemap: 'https://kelvinamoaba.com/sitemap.xml',
   };
 }
