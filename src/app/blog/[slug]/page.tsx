@@ -1,12 +1,12 @@
-import fs from "fs";
-import matter from "gray-matter";
-import { Metadata, ResolvingMetadata } from "next";
-import Script from "next/script";
-import Markdown from "react-markdown";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import fs from 'fs';
+import matter from 'gray-matter';
+import { Metadata, ResolvingMetadata } from 'next';
+import Script from 'next/script';
+import Markdown from 'react-markdown';
 
-import BackButton from "./back-button";
+import CodeSection from '@/app/blog/[slug]/code-section';
+
+import BackButton from './back-button';
 
 interface Props {
   params: Promise<{
@@ -72,7 +72,7 @@ const BlogDetailPage = async (props0: Props) => {
       <div className="mt-10 text-xl font-bold md:text-3xl">
         {postContent.title}
       </div>
-      <div className="mt-2 text-sm text-gray-400">
+      <div className="mt-2 text-sm text-gray-500">
         Kelvin Amoaba • {new Date(postContent.date).toLocaleDateString()}
       </div>
       {postContent.cover && (
@@ -83,58 +83,55 @@ const BlogDetailPage = async (props0: Props) => {
           alt={postContent.title}
         />
       )}
-      <div className="mt-10 space-y-10 max-w-3xl font-light leading-8 prose text-white/90 dark:prose-invert">
+      <div className="mt-10 space-y-10 max-w-3xl font-light leading-6 prose text-black/90 dark:prose-invert">
         <Markdown
           components={{
             code({ node, className, children, ...props }) {
               const match = /language-(\w+)/.exec(className || '');
               return match ? (
                 <div className="overflow-hidden w-full rounded-md">
-                  <SyntaxHighlighter
-                    style={atomOneDarkReasonable}
+                  <CodeSection
+                    code={String(children).replace(/\n$/, '')}
                     language={match[1]}
-                    PreTag="div"
-                  >
-                    {String(children).replace(/\n$/, '')}
-                  </SyntaxHighlighter>
+                  />
                 </div>
               ) : (
-                <code className={className + ' text-white'} {...props}>
+                <code className={className + ' text-black'} {...props}>
                   {children}
                 </code>
               );
             },
             // change color of headings
             h1({ node, ...props }) {
-              return <h1 className="text-yellow-500" {...props} />;
+              return <h1 className="text-black/90" {...props} />;
             },
             h2({ node, ...props }) {
-              return <h2 className="text-yellow-500" {...props} />;
+              return <h2 className="text-black/90" {...props} />;
             },
             h3({ node, ...props }) {
-              return <h3 className="mb-0 text-yellow-500" {...props} />;
+              return <h3 className="mb-0 text-black/90" {...props} />;
             },
             h4({ node, ...props }) {
-              return <h4 className="text-yellow-500" {...props} />;
+              return <h4 className="text-black/90" {...props} />;
             },
             h5({ node, ...props }) {
-              return <h5 className="text-yellow-500" {...props} />;
+              return <h5 className="text-black/90" {...props} />;
             },
             // change color of bold text
             strong({ node, ...props }) {
-              return <strong className="font-bold text-white" {...props} />;
+              return <strong className="font-bold text-black" {...props} />;
             },
             // change color of italic text
             em({ node, ...props }) {
-              return <em className="text-yellow-500" {...props} />;
+              return <em className="text-black/90" {...props} />;
             },
 
             blockquote({ node, ...props }) {
-              return <blockquote className="text-yellow-500" {...props} />;
+              return <blockquote className="text-black/90" {...props} />;
             },
             // change color of links
             a({ node, ...props }) {
-              return <a className="text-yellow-500" {...props} />;
+              return <a className="text-black/90" {...props} />;
             },
 
             // remove background color in pre tags
