@@ -3,14 +3,9 @@
 @tailwind utilities;
 
 html {
-  @apply text-white;
-  /* @apply bg-gray-900; */
-  /* @apply bg-black; */
-  /* background-color: #222426; */
-  /* background-color: #101720; */
-  /* background-color: #161f28; */
-  /* background-color: #222428; */
-  background-color: #1f212a;
+  @apply text-black;
+  @apply bg-gray-300;
+  zoom: 110%;
 }
 
 body {
