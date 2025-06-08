@@ -1,6 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import { FaDev, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaHashnode, FaXTwitter } from 'react-icons/fa6';
 import { IoMailOpen } from 'react-icons/io5';
