@@ -5,6 +5,7 @@
 html {
   @apply text-black;
   @apply bg-gray-300;
+  zoom: 110%;
 }
 
 body {
