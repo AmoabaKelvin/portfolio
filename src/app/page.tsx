@@ -1,11 +1,11 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
-import { FaDev, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { FaHashnode } from 'react-icons/fa6';
+import { FaDev, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaHashnode, FaXTwitter } from 'react-icons/fa6';
 import { IoMailOpen } from 'react-icons/io5';
 
-import ProjectCard from '@/components/project-card';
+import { cn } from '@/lib/utils';
 import { projects } from '@/projects';
 
 const readBlogPostsFromFolder = async (): Promise<
@@ -39,16 +39,12 @@ export default async function Home() {
       <main className="flex flex-col px-5 py-2 md:px-10">
         <div className="flex flex-col gap-2 justify-center mt-20">
           <p className="text-4xl font-extrabold">Kelvin Amoaba</p>
-          <p className="mt-1">
-            <span className="mr-2">🇬🇭</span>• software engineer • writer
-          </p>
+          <p className="mt-1">software engineer</p>
           <div>
-            <p className="text-sm text-gray-400">
-              understanding low level stuff • system architecture
+            <p className="text-sm text-gray-500">
+              system design • cloud • networking • backend • databases
             </p>
-            <p className="text-sm text-gray-400">
-              web architecture • compilers
-            </p>
+            <p className="text-sm text-gray-500">golang • compilers</p>
           </div>
           {/* social media icons, next to each other, gh, twitter, linkedin, hashnode, devto */}
           <div className="flex gap-4 items-center mt-2">
@@ -56,7 +52,7 @@ export default async function Home() {
               <FaGithub size={21} />
             </a>
             <a href="https://twitter.com/kelamoaba" target="_blank">
-              <FaTwitter size={21} />
+              <FaXTwitter size={21} />
             </a>
             <a href="https://linkedin.com/in/kelvin-amoaba" target="_blank">
               <FaLinkedin size={21} />
@@ -81,8 +77,7 @@ export default async function Home() {
             {blogPosts.map((post) => (
               <div className="flex flex-col gap-1" key={post.title}>
                 <p className="text-sm">
-                  <span className="font-light text-gray-400 -tracking-widest">
-                    {/* the date should be like Month DayNum Year */}
+                  <span className="font-light text-gray-500">
                     {new Date(post.date).toLocaleDateString('en-US', {
                       month: 'short',
                       day: 'numeric',
@@ -91,7 +86,7 @@ export default async function Home() {
                     : {'  '}
                   </span>
                   <Link href={`/blog/${post.slug}`}>
-                    <span className="text-white hover:underline underline-offset-4 hover:cursor-pointer text-md">
+                    <span className="text-black hover:underline underline-offset-4 hover:cursor-pointer text-md">
                       {post.title}
                     </span>
                   </Link>
@@ -106,7 +101,23 @@ export default async function Home() {
           <p className="text-3xl font-bold">projects</p>
           <div className="flex flex-col gap-5 mt-2">
             {projects.map((project) => (
-              <ProjectCard project={project} key={project.name} />
+              // <ProjectCard project={project} key={project.name} />
+              <div className="flex flex-col gap-1" key={project.name}>
+                <p className="text-sm">
+                  <Link
+                    href={project.link}
+                    className={cn(
+                      'font-light text-gray-600 hover:underline underline-offset-4 hover:cursor-pointer',
+                      {
+                        'pointer-events-none': !project.link,
+                      }
+                    )}
+                  >
+                    {project.name}
+                  </Link>
+                  :<span className="ml-2 leading-6">{project.description}</span>
+                </p>
+              </div>
             ))}
           </div>
         </div>
