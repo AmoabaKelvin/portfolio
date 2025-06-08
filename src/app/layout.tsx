@@ -2,18 +2,18 @@ import './globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
-import { JetBrains_Mono } from 'next/font/google';
+import { Funnel_Display } from 'next/font/google';
 
 export const metadata: Metadata = {
   title: 'Kelvin Amoaba',
   description:
-    'I am Kelvin Amoaba, a software engineer obsessed with building products that solve real-world problems and understanding low-level systems.',
+    'Building products that solve real-world problems and exploring the depths of low-level systems',
   openGraph: {
     images: ['https://i.imgur.com/mkixaLE.png'],
   },
 };
 
-const jetBrainsMono = JetBrains_Mono({
+const funnelDisplay = Funnel_Display({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
 });
@@ -24,10 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={jetBrainsMono.className}>
+    <html lang="en" className={funnelDisplay.className}>
       <body>
         <div className="flex justify-between">
-          <div className="flex justify-center items-center m-4 w-10 h-10 border-2 border-white">
+          <div className="flex justify-center items-center m-4 w-10 h-10 border-2 border-black">
             <p>KA</p>
           </div>
 
@@ -43,7 +43,7 @@ export default function RootLayout({
           <Analytics />
         </main>
         <footer
-          className="flex justify-center items-center mt-20 w-full h-10 text-sm text-gray-400"
+          className="flex justify-center items-center mt-20 w-full h-10 text-sm text-black"
           suppressHydrationWarning
         >
           <p>
