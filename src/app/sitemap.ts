@@ -13,11 +13,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: 'https://kelvinamoaba.live',
+      url: 'https://kelvinamoaba.com',
       lastModified: new Date().toISOString(),
     },
     ...posts.map((slug) => ({
-      url: `https://kelvinamoaba.live/blog/${slug}`,
+      url: `https://kelvinamoaba.com/blog/${slug}`,
       lastModified: new Date().toISOString(),
     })),
   ];
