@@ -1,6 +1,6 @@
 {
-  "commit": "efb9370e292de0bca285f8d21c93afd21691addb",
-  "generated": "2025-06-14T23:04:12.163Z",
+  "commit": "f74371cbdbaef34df4abf37b95ad7cbe0c23466c",
+  "generated": "2025-06-14T23:46:28.420Z",
   "metadata": [
     {
       "__outstatic": {
@@ -130,16 +130,19 @@
     },
     {
       "__outstatic": {
-        "commit": "efb9370e292de0bca285f8d21c93afd21691addb",
-        "hash": "2642484435",
+        "commit": "f74371cbdbaef34df4abf37b95ad7cbe0c23466c",
+        "hash": "2811621186",
         "path": "src/posts/deep-dive-into-stacks-a-practical-guide-for-software-engineers.md"
       },
-      "author": null,
+      "author": {
+        "name": "Kelvin Amoaba",
+        "picture": ""
+      },
       "collection": "posts",
       "cover": "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/wstYTyWtGac/upload/d1ae6fdfc834744111ba65a912501eb4.jpeg",
       "cuid": "clorlftng00080al9bet2h31w",
       "datePublished": "2023-11-09T19:40:19.000Z",
-      "publishedAt": "2025-06-14T23:02:28.899Z",
+      "publishedAt": "2023-11-09T00:00:00.000Z",
       "slug": "deep-dive-into-stacks-a-practical-guide-for-software-engineers",
       "status": "published",
       "tags": "programming, data-structures, data-structures-and-algorithm-course",
