@@ -1,6 +1,13 @@
 {
-  "title": "Posts",
-  "slug": "posts",
+  "title": "posts",
   "type": "object",
-  "properties": {}
+  "properties": {
+    "tags": {
+      "description": "stacks, programming, data structures",
+      "required": false,
+      "fieldType": "Text",
+      "dataType": "string",
+      "title": "Tags"
+    }
+  }
 }
