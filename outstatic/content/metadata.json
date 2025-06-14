@@ -1,6 +1,6 @@
 {
-  "commit": "",
-  "generated": "Sat, 14 Jun 2025 23:01:50 GMT",
+  "commit": "efb9370e292de0bca285f8d21c93afd21691addb",
+  "generated": "2025-06-14T23:04:12.163Z",
   "metadata": [
     {
       "__outstatic": {
@@ -43,20 +43,6 @@
       "slug": "custom-authentication-backend-in-django",
       "tags": "tutorial, django, python, webdev",
       "title": "Creating a Custom Authentication Backend in Django"
-    },
-    {
-      "__outstatic": {
-        "commit": "",
-        "hash": "938677468",
-        "path": "src/posts/deep-dive-into-stacks-a-practical-guide-for-software-engineers.md"
-      },
-      "collection": "posts",
-      "cover": "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/wstYTyWtGac/upload/d1ae6fdfc834744111ba65a912501eb4.jpeg",
-      "cuid": "clorlftng00080al9bet2h31w",
-      "datePublished": "2023-11-09T19:40:19.000Z",
-      "slug": "deep-dive-into-stacks-a-practical-guide-for-software-engineers",
-      "tags": "programming, data-structures, data-structures-and-algorithm-course",
-      "title": "Deep Dive into Stacks: A Practical Guide for Software Engineers"
     },
     {
       "__outstatic": {
@@ -141,6 +127,23 @@
       "slug": "paying-attention-to-details",
       "tags": "frontend, web-development, programming, software-engineering",
       "title": "Paying Attention to Details As a Developer"
+    },
+    {
+      "__outstatic": {
+        "commit": "efb9370e292de0bca285f8d21c93afd21691addb",
+        "hash": "2642484435",
+        "path": "src/posts/deep-dive-into-stacks-a-practical-guide-for-software-engineers.md"
+      },
+      "author": null,
+      "collection": "posts",
+      "cover": "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/wstYTyWtGac/upload/d1ae6fdfc834744111ba65a912501eb4.jpeg",
+      "cuid": "clorlftng00080al9bet2h31w",
+      "datePublished": "2023-11-09T19:40:19.000Z",
+      "publishedAt": "2025-06-14T23:02:28.899Z",
+      "slug": "deep-dive-into-stacks-a-practical-guide-for-software-engineers",
+      "status": "published",
+      "tags": "programming, data-structures, data-structures-and-algorithm-course",
+      "title": "Deep Dive into Stacks: A Practical Guide for Software Engineers"
     }
   ]
 }
