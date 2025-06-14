@@ -1,0 +1,13 @@
+{
+  "title": "posts",
+  "type": "object",
+  "properties": {
+    "tags": {
+      "description": "stacks, programming, data structures",
+      "required": false,
+      "fieldType": "Text",
+      "dataType": "string",
+      "title": "Tags"
+    }
+  }
+}
