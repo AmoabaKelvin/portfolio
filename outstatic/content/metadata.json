@@ -1,0 +1,146 @@
+{
+  "commit": "",
+  "generated": "Sat, 14 Jun 2025 23:01:50 GMT",
+  "metadata": [
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "3152635418",
+        "path": "src/posts/building-a-simple-smtp-server.md"
+      },
+      "collection": "posts",
+      "cover": "https://dynamic-og-image-generator.vercel.app/api/generate?title=Building+a+simple+mail+server%3A+Prologue&author=Kelvin+Amoaba&websiteUrl=https%3A%2F%2Fkelvinamoaba.com&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F97001695%3Fv%3D4&theme=github",
+      "datePublished": "2024-06-15T00:00:00.000Z",
+      "seoTitle": "Building a simple SMTP server",
+      "slug": "building-a-simple-smtp-server",
+      "tags": "smtp, server, email, protocol, simple",
+      "title": "What does it mean to build a simple SMTP server?"
+    },
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "3793414107",
+        "path": "src/posts/2023-in-review.md"
+      },
+      "collection": "posts",
+      "cover": "https://res.cloudinary.com/dphleco2s/image/upload/v1703933385/White_Sunset_Blog_Banner_iqzlpk.png",
+      "datePublished": "2023-12-30T01:05:07.341Z",
+      "seoTitle": "My 2023 in Review",
+      "slug": "2023-in-review",
+      "tags": "2023, review, year, goals, resolutions",
+      "title": "2023 in Review"
+    },
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "3784560442",
+        "path": "src/posts/custom-authentication-backend-in-django.md"
+      },
+      "collection": "posts",
+      "cover": "https://res.cloudinary.com/practicaldev/image/fetch/s--jBFjsQ3E--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y79h0v6wtipnu4xdcciu.jpg",
+      "datePublished": "Fri Jul 18 2022 07:02:34 GMT+0000 (Coordinated Universal Time)",
+      "seoTitle": "Custom Authentication Backend in Django",
+      "slug": "custom-authentication-backend-in-django",
+      "tags": "tutorial, django, python, webdev",
+      "title": "Creating a Custom Authentication Backend in Django"
+    },
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "938677468",
+        "path": "src/posts/deep-dive-into-stacks-a-practical-guide-for-software-engineers.md"
+      },
+      "collection": "posts",
+      "cover": "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/wstYTyWtGac/upload/d1ae6fdfc834744111ba65a912501eb4.jpeg",
+      "cuid": "clorlftng00080al9bet2h31w",
+      "datePublished": "2023-11-09T19:40:19.000Z",
+      "slug": "deep-dive-into-stacks-a-practical-guide-for-software-engineers",
+      "tags": "programming, data-structures, data-structures-and-algorithm-course",
+      "title": "Deep Dive into Stacks: A Practical Guide for Software Engineers"
+    },
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "2624875384",
+        "path": "src/posts/a-5-step-approach-to-problem-solving-dsa.md"
+      },
+      "collection": "posts",
+      "cover": "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/DnXqvmS0eXM/upload/878e2dab7224742cd552014716babee7.jpeg",
+      "cuid": "clp3pc0rq000l0ak2celtf039",
+      "datePublished": "Sat Nov 18 2023 07:02:34 GMT+0000 (Coordinated Universal Time)",
+      "seoTitle": "A 5-Step Approach to Problem Solving (DSA)",
+      "slug": "a-5-step-approach-to-problem-solving-dsa",
+      "tags": "tutorial, algorithms, data-structures, beginners",
+      "title": "A 5-Step Approach to Problem Solving (DSA)"
+    },
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "742386244",
+        "path": "src/posts/obscurity-is-your-biggest-enemy.md"
+      },
+      "collection": "posts",
+      "cover": "https://assets.entrepreneur.com/content/3x2/2000/1413489238-businesses-die-obscurity-do-all-you-can-gain-attention.jpg?format=pjeg&auto=webp",
+      "cuid": "clp3pc0rq000l0ak2celtf039",
+      "datePublished": "Mon Jun 09 2025 20:07:34 GMT+0000 (Coordinated Universal Time)",
+      "seoTitle": "Obscurity is your biggest enemy",
+      "slug": "obscurity-is-your-biggest-enemy",
+      "tags": "career, job-search, life",
+      "title": "Obscurity is your biggest enemy"
+    },
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "2543527082",
+        "path": "src/posts/what-is-bigO.md"
+      },
+      "collection": "posts",
+      "cover": "https://images.unsplash.com/photo-1587612049655-c1030366a74a?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.png",
+      "datePublished": "2023-12-24T21:26:07.839Z",
+      "seoTitle": "What is Big O Notation?",
+      "slug": "what-is-bigO",
+      "tags": "tutorial, algorithms, data-structures, beginners",
+      "title": "What is Big O Notation?"
+    },
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "480098017",
+        "path": "src/posts/escape-analysis.md"
+      },
+      "collection": "posts",
+      "datePublished": "2025-02-11T01:05:07.341Z",
+      "seoTitle": "Escape Analysis",
+      "slug": "escape-analysis",
+      "tags": "escape analysis, compiler optimization, memory management, Go",
+      "title": "Escape Analysis"
+    },
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "198509540",
+        "path": "src/posts/monotonic-and-wall-clock-time.md"
+      },
+      "collection": "posts",
+      "cover": "https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
+      "datePublished": "2025-03-16T01:05:07.341Z",
+      "seoTitle": "Monotonic and Wall Clock Time",
+      "slug": "monotonic-and-wall-clock-time",
+      "tags": "monotonic, wall clock, time, go",
+      "title": "Monotonic and Wall Clock Time"
+    },
+    {
+      "__outstatic": {
+        "commit": "",
+        "hash": "4102200275",
+        "path": "src/posts/paying-attention-to-details.md"
+      },
+      "collection": "posts",
+      "cover": "https://images.unsplash.com/photo-1579019874729-ffca9e9fe11c?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "datePublished": "2024-01-07T23:16:39.778Z",
+      "slug": "paying-attention-to-details",
+      "tags": "frontend, web-development, programming, software-engineering",
+      "title": "Paying Attention to Details As a Developer"
+    }
+  ]
+}
