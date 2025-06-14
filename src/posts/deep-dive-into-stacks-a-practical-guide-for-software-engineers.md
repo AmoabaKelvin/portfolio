@@ -5,9 +5,11 @@ cuid: "clorlftng00080al9bet2h31w"
 slug: "deep-dive-into-stacks-a-practical-guide-for-software-engineers"
 cover: "https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/wstYTyWtGac/upload/d1ae6fdfc834744111ba65a912501eb4.jpeg"
 tags: "programming, data-structures, data-structures-and-algorithm-course"
-publishedAt: "2025-06-14T23:02:28.899Z"
+publishedAt: "2023-11-09T00:00:00.000Z"
 status: "published"
 author:
+  name: "Kelvin Amoaba"
+  picture: ""
 ---
 
 ## What is a Stack?
