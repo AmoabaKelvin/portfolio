@@ -8,6 +8,9 @@ import CodeSection from '@/app/blog/[slug]/code-section';
 
 import BackButton from './back-button';
 
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 interface Props {
   params: Promise<{
     slug: string;
