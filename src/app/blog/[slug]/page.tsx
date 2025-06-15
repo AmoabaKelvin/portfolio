@@ -1,5 +1,3 @@
-import fs from 'fs';
-import matter from 'gray-matter';
 import { Metadata, ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
@@ -33,10 +31,6 @@ export async function generateMetadata(
     'tags',
   ]);
 
-  // if (!blogPost) {
-  //   return notFound();
-  // }
-
   return {
     title: blogPost?.title,
     openGraph: {
@@ -59,22 +53,6 @@ export async function generateMetadata(
       .substring(0, 200),
   };
 }
-
-const getPostContent = async (slug: string) => {
-  const singlePost = fs.readFileSync(
-    process.cwd() + `/src/posts/${slug}.md`,
-    'utf-8'
-  );
-  const parsedSinglePost = matter(singlePost);
-
-  return {
-    content: parsedSinglePost.content,
-    title: parsedSinglePost.data.title,
-    date: parsedSinglePost.data.datePublished,
-    cover: parsedSinglePost.data.cover,
-    tags: parsedSinglePost.data.tags,
-  };
-};
 
 const BlogDetailPage = async (props0: Props) => {
   const params = await props0.params;
