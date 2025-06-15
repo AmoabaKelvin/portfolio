@@ -1,10 +1,10 @@
 {
-  "commit": "6a5138479dc0dd22d9108b463adf0c31ad3cb920",
-  "generated": "2025-06-15T00:11:58.894Z",
+  "commit": "1a04b58eff5941514be23b9ca6319cdbae6a0093",
+  "generated": "2025-06-15T01:23:07.809Z",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "6a5138479dc0dd22d9108b463adf0c31ad3cb920",
+        "commit": "1a04b58eff5941514be23b9ca6319cdbae6a0093",
         "hash": "2309443124",
         "path": "outstatic/content/posts/obscurity-is-your-biggest-enemy.md"
       },
