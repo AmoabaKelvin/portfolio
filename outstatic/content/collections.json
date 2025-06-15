@@ -2,7 +2,7 @@
   {
     "title": "Posts",
     "slug": "posts",
-    "path": "src/posts",
+    "path": "outstatic/content/posts",
     "children": []
   }
 ]
