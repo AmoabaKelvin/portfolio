@@ -1,6 +1,5 @@
-import fs from 'fs';
-import matter from 'gray-matter';
 import { Link } from 'next-view-transitions';
+import { getDocuments } from 'outstatic/server';
 import { FaDev, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaHashnode, FaXTwitter } from 'react-icons/fa6';
 import { IoMailOpen } from 'react-icons/io5';
@@ -8,32 +7,15 @@ import { IoMailOpen } from 'react-icons/io5';
 import { cn } from '@/lib/utils';
 import { projects } from '@/projects';
 
-const readBlogPostsFromFolder = async (): Promise<
-  { title: string; date: Date; slug: string }[]
-> => {
-  const blogPosts = fs.readdirSync('./src/posts');
-  const mdFiles = blogPosts.filter((post) => post.endsWith('.md'));
-  const parsedMdFiles = mdFiles.map((post) => {
-    return matter(fs.readFileSync(`./src/posts/${post}`, 'utf-8'));
-  });
-
-  const sortedBlogPosts = parsedMdFiles.sort((a, b) => {
-    const dateA = new Date(a.data.datePublished);
-    const dateB = new Date(b.data.datePublished);
-    return dateB.getTime() - dateA.getTime();
-  });
-
-  return sortedBlogPosts.map((post) => {
-    return {
-      title: post.data.title,
-      date: post.data.datePublished,
-      slug: post.data.slug,
-    };
-  });
-};
-
 export default async function Home() {
-  const blogPosts = await readBlogPostsFromFolder();
+  // Get all posts and sort by datePublished (most recent first)
+  const posts = getDocuments('posts', ['title', 'datePublished', 'slug']).sort(
+    (a, b) => {
+      const dateA = new Date(a.datePublished as string);
+      const dateB = new Date(b.datePublished as string);
+      return dateB.getTime() - dateA.getTime();
+    }
+  );
   return (
     <div className="mx-auto max-w-3xl">
       <main className="flex flex-col px-5 py-2 md:px-10">
@@ -74,15 +56,18 @@ export default async function Home() {
         <div className="flex flex-col gap-2 mt-10">
           <p className="text-3xl font-bold">writings</p>
           <div className="flex flex-col gap-4 mt-2">
-            {blogPosts.map((post) => (
+            {posts.map((post) => (
               <div className="flex flex-col gap-1" key={post.title}>
                 <p className="text-sm">
                   <span className="font-light text-gray-500">
-                    {new Date(post.date).toLocaleDateString('en-US', {
-                      month: 'short',
-                      day: 'numeric',
-                      year: 'numeric',
-                    })}
+                    {new Date(post.datePublished as string).toLocaleDateString(
+                      'en-US',
+                      {
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric',
+                      }
+                    )}
                     : {'  '}
                   </span>
                   <Link href={`/blog/${post.slug}`}>
