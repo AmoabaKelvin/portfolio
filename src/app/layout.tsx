@@ -29,8 +29,8 @@ export default function RootLayout({
       <html lang="en" className={funnelDisplay.className}>
         <body>
           <div className="flex justify-between">
-            <div className="flex justify-center items-center m-4 w-10 h-10 border-2 border-black">
-              <p>KA</p>
+            <div className="flex justify-center items-center m-4 w-10 h-10 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-white cursor-pointer">
+              <p className="font-bold text-black">KA</p>
             </div>
 
             {/*           <div className="flex justify-center items-center px-3 m-4 h-10 border-2 border-white">

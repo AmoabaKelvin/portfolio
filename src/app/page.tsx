@@ -2,6 +2,7 @@ import { Link } from 'next-view-transitions';
 import { getDocuments } from 'outstatic/server';
 import { FaDev, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaHashnode, FaXTwitter } from 'react-icons/fa6';
+import { FiArrowUpRight } from 'react-icons/fi';
 import { IoMailOpen } from 'react-icons/io5';
 
 import { cn } from '@/lib/utils';
@@ -20,7 +21,7 @@ export default async function Home() {
     <div className="mx-auto max-w-3xl">
       <main className="flex flex-col px-5 py-2 md:px-10">
         <div className="flex flex-col gap-2 justify-center mt-20">
-          <p className="text-4xl font-extrabold">Kelvin Amoaba</p>
+          <p className="text-4xl font-extrabold text-black">Kelvin Amoaba</p>
           <p className="mt-1">software engineer</p>
           <div>
             <p className="text-sm text-gray-500">
@@ -29,32 +30,64 @@ export default async function Home() {
             <p className="text-sm text-gray-500">golang • compilers</p>
           </div>
           {/* social media icons, next to each other, gh, twitter, linkedin, hashnode, devto */}
-          <div className="flex gap-4 items-center mt-2">
-            <a href="https://github.com/AmoabaKelvin" target="_blank">
-              <FaGithub size={21} />
+          <div className="flex gap-3 items-center mt-2">
+            <a
+              href="https://github.com/AmoabaKelvin"
+              target="_blank"
+              className="p-2 border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-white"
+            >
+              <FaGithub size={16} />
             </a>
-            <a href="https://twitter.com/kelamoaba" target="_blank">
-              <FaXTwitter size={21} />
+            <a
+              href="https://twitter.com/kelamoaba"
+              target="_blank"
+              className="p-2 border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-white"
+            >
+              <FaXTwitter size={16} />
             </a>
-            <a href="https://linkedin.com/in/kelvin-amoaba" target="_blank">
-              <FaLinkedin size={21} />
+            <a
+              href="https://linkedin.com/in/kelvin-amoaba"
+              target="_blank"
+              className="p-2 border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-white"
+            >
+              <FaLinkedin size={16} />
             </a>
-            <a href="https://hashnode.com/@AmoabaKelvin" target="_blank">
-              <FaHashnode size={21} />
+            <a
+              href="https://hashnode.com/@AmoabaKelvin"
+              target="_blank"
+              className="p-2 border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-white"
+            >
+              <FaHashnode size={16} />
             </a>
-            <a href="https://dev.to/amoabakelvin" target="_blank">
-              <FaDev size={21} />
+            <a
+              href="https://dev.to/amoabakelvin"
+              target="_blank"
+              className="p-2 border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-white"
+            >
+              <FaDev size={16} />
             </a>
-            <a href="mailto:kel.amoaba@gmail.com" target="_blank">
-              <IoMailOpen size={21} />
+            <a
+              href="mailto:kel.amoaba@gmail.com"
+              target="_blank"
+              className="p-2 border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-white"
+            >
+              <IoMailOpen size={16} />
             </a>
           </div>
-          <div className="mx-auto my-10 w-20 h-1 border-t border-gray-400"></div>
+          <div className="mx-auto my-10 w-20 h-1 bg-black shadow-[2px_2px_0px_0px_rgba(0,0,0,0.3)]"></div>
         </div>
 
         {/* writings */}
         <div className="flex flex-col gap-2 mt-10">
-          <p className="text-3xl font-bold">writings</p>
+          <div className="flex gap-2 items-center">
+            <p className="text-3xl font-bold">writings</p>
+            <Link
+              href="/writings"
+              className="p-1 border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-white"
+            >
+              <FiArrowUpRight size={16} />
+            </Link>
+          </div>
           <div className="flex flex-col gap-4 mt-2">
             {posts.map((post) => (
               <div className="flex flex-col gap-1" key={post.title}>
