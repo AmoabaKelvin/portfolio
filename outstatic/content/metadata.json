@@ -1,6 +1,26 @@
 {
-  "commit": "d834f015681dc7932e56d8fa7f599c2cb56b63ad",
-  "generated": "2025-06-14T23:52:33.091Z",
+  "commit": "04f212c0d76f57bb03f18d81de20d3789b4541c8",
+  "generated": "2025-06-15T00:11:23.190Z",
   "metadata": [
+    {
+      "__outstatic": {
+        "commit": "04f212c0d76f57bb03f18d81de20d3789b4541c8",
+        "hash": "974521722",
+        "path": "outstatic/content/posts/obscurity-is-your-biggest-enemy.md"
+      },
+      "author": {
+        "picture": ""
+      },
+      "collection": "posts",
+      "cover": "https://assets.entrepreneur.com/content/3x2/2000/1413489238-businesses-die-obscurity-do-all-you-can-gain-attention.jpg?format=pjeg&auto=webp",
+      "cuid": "clp3pc0rq000l0ak2celtf039",
+      "datePublished": "Mon Jun 09 2025 20:07:34 GMT+0000 (Coordinated Universal Time)",
+      "publishedAt": "2025-06-09T00:00:00.000Z",
+      "seoTitle": "Obscurity is your biggest enemy",
+      "slug": "obscurity-is-your-biggest-enemy",
+      "status": "draft",
+      "tags": "career, job-search, life",
+      "title": "Obscurity is your biggest enemy"
+    }
   ]
 }
