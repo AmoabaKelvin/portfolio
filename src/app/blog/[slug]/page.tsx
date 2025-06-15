@@ -19,9 +19,12 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const params = await props.params;
-  const blogSlug = params.slug;
+  const blogSlug = params.slug.split('?')[0];
 
-  const blogPost = getDocumentBySlug('posts', blogSlug, [
+  // Remove query parameters from slug if present
+  const cleanSlug = blogSlug.split('?')[0];
+
+  const blogPost = getDocumentBySlug('posts', cleanSlug, [
     'title',
     'publishedAt',
     'slug',
@@ -55,10 +58,12 @@ export async function generateMetadata(
 }
 
 const BlogDetailPage = async (props0: Props) => {
-  const params = await props0.params;
-  // const postContent = await getPostContent(params.slug);
+  const { slug } = await props0.params;
 
-  const post = getDocumentBySlug('posts', params.slug, [
+  // Remove query parameters from slug if present
+  const cleanSlug = slug.split('?')[0];
+
+  const post = getDocumentBySlug('posts', cleanSlug, [
     'title',
     'publishedAt',
     'slug',
