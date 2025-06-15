@@ -1,11 +1,11 @@
 {
-  "commit": "04f212c0d76f57bb03f18d81de20d3789b4541c8",
-  "generated": "2025-06-15T00:11:23.190Z",
+  "commit": "6a5138479dc0dd22d9108b463adf0c31ad3cb920",
+  "generated": "2025-06-15T00:11:58.894Z",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "04f212c0d76f57bb03f18d81de20d3789b4541c8",
-        "hash": "974521722",
+        "commit": "6a5138479dc0dd22d9108b463adf0c31ad3cb920",
+        "hash": "2309443124",
         "path": "outstatic/content/posts/obscurity-is-your-biggest-enemy.md"
       },
       "author": {
@@ -18,7 +18,7 @@
       "publishedAt": "2025-06-09T00:00:00.000Z",
       "seoTitle": "Obscurity is your biggest enemy",
       "slug": "obscurity-is-your-biggest-enemy",
-      "status": "draft",
+      "status": "published",
       "tags": "career, job-search, life",
       "title": "Obscurity is your biggest enemy"
     }

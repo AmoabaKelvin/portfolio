@@ -7,7 +7,7 @@ slug: "obscurity-is-your-biggest-enemy"
 cover: "https://assets.entrepreneur.com/content/3x2/2000/1413489238-businesses-die-obscurity-do-all-you-can-gain-attention.jpg?format=pjeg&auto=webp"
 tags: "career, job-search, life"
 publishedAt: "2025-06-09T00:00:00.000Z"
-status: "draft"
+status: "published"
 author:
   picture: ""
 ---
