@@ -1,15 +1,20 @@
 import { Metadata, ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
-import { getDocumentBySlug } from 'outstatic/server';
+import { getDocumentBySlug, getDocumentSlugs } from 'outstatic/server';
 import Markdown from 'react-markdown';
 
 import CodeSection from '@/app/blog/[slug]/code-section';
 
 import BackButton from './back-button';
 
-export const dynamic = 'force-static';
 export const revalidate = false;
+export const dynamic = 'force-static';
+
+export async function generateStaticParams() {
+  const posts = getDocumentSlugs('posts');
+  return posts.map((slug) => ({ slug }));
+}
 
 interface Props {
   params: Promise<{
@@ -22,20 +27,9 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const params = await props.params;
-  const blogSlug = params.slug.split('?')[0];
+  const blogSlug = params.slug;
 
-  // Remove query parameters from slug if present
-  const cleanSlug = blogSlug.split('?')[0];
-
-  const blogPost = getDocumentBySlug('posts', cleanSlug, [
-    'title',
-    'publishedAt',
-    'slug',
-    'author',
-    'content',
-    'cover',
-    'tags',
-  ]);
+  const blogPost = await getPost(blogSlug);
 
   return {
     title: blogPost?.title,
@@ -63,17 +57,7 @@ export async function generateMetadata(
 const BlogDetailPage = async (props0: Props) => {
   const { slug } = await props0.params;
 
-  // Remove query parameters from slug if present
-  const cleanSlug = slug.split('?')[0];
-
-  const post = getDocumentBySlug('posts', cleanSlug, [
-    'title',
-    'publishedAt',
-    'slug',
-    'author',
-    'content',
-    'cover',
-  ]);
+  const post = await getPost(slug);
 
   if (!post) {
     return notFound();
@@ -177,3 +161,15 @@ const BlogDetailPage = async (props0: Props) => {
 };
 
 export default BlogDetailPage;
+
+async function getPost(slug: string) {
+  return getDocumentBySlug('posts', slug, [
+    'title',
+    'publishedAt',
+    'slug',
+    'author',
+    'content',
+    'cover',
+    'tags',
+  ]);
+}
