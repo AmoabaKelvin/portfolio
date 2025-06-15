@@ -1,19 +1,21 @@
 ---
-title: "A 5-Step Approach to Problem Solving (DSA)"
-seoTitle: "A 5-Step Approach to Problem Solving (DSA)"
+title: 'A 5-Step Approach to Problem Solving (DSA)'
+seoTitle: 'A 5-Step Approach to Problem Solving (DSA)'
 datePublished: Sat Nov 18 2023 07:02:34 GMT+0000 (Coordinated Universal Time)
 cuid: clp3pc0rq000l0ak2celtf039
 slug: a-5-step-approach-to-problem-solving-dsa
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/DnXqvmS0eXM/upload/878e2dab7224742cd552014716babee7.jpeg
 tags: tutorial, algorithms, data-structures, beginners
-
+status: 'published'
+author:
+  picture: ''
 ---
 
 When starting to practice the data structures and algorithms you've learned on platforms such as Leetcode, Codewars or Hackerrank, you can go from being pretty excited to pretty down in a matter of few minutes behind a problem.
 
 I encountered this a lot. It makes you start to question a whole lot of things, from whether it's your brain that cannot process much to whether you are not built for this field and a whole lot of other things.
 
-But then, after spending some time questioning my skills and going back and forth between problems, it turned out that *I was not really doing some things right from the onset* and that had to do with **the way I approached the problems** I tried to solve.
+But then, after spending some time questioning my skills and going back and forth between problems, it turned out that _I was not really doing some things right from the onset_ and that had to do with **the way I approached the problems** I tried to solve.
 
 In this article, I will try and explain why certain things should be avoided or embraced as I go over the 5 steps I used to improve at solving these problems.
 

@@ -1,10 +1,13 @@
 ---
 title: 'Monotonic and Wall Clock Time'
 seoTitle: 'Monotonic and Wall Clock Time'
-datePublished: 2025-03-16T01:05:07.341Z
+datePublished: Sun Mar 16 2025 01:05:07 GMT+0000 (Coordinated Universal Time)
 slug: monotonic-and-wall-clock-time
 cover: https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80
 tags: monotonic, wall clock, time, go
+status: 'published'
+author:
+  picture: ''
 ---
 
 **Monotonic** and **wall clock** time are two ways we measure time.

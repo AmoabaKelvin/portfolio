@@ -1,9 +1,12 @@
 ---
 title: 'Escape Analysis'
 seoTitle: 'Escape Analysis'
-datePublished: 2025-02-11T01:05:07.341Z
+datePublished: Tue Feb 11 2025 01:05:07 GMT+0000 (Coordinated Universal Time)
 slug: escape-analysis
 tags: escape analysis, compiler optimization, memory management, Go
+status: 'published'
+author:
+  picture: ''
 ---
 
 We know that the computer stores variables depending on where they are within the scope of the program into either the stack or heap memory.

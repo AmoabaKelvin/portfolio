@@ -1,10 +1,13 @@
 ---
 title: '2023 in Review'
 seoTitle: 'My 2023 in Review'
-datePublished: 2023-12-30T01:05:07.341Z
+datePublished: Sat Dec 30 2023 01:05:07 GMT+0000 (Coordinated Universal Time)
 slug: 2023-in-review
 cover: https://res.cloudinary.com/dphleco2s/image/upload/v1703933385/White_Sunset_Blog_Banner_iqzlpk.png
 tags: 2023, review, year, goals, resolutions
+status: 'published'
+author:
+  picture: ''
 ---
 
 ### What a great start 🏎️
