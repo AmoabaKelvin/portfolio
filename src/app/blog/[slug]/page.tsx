@@ -1,7 +1,9 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import { Metadata, ResolvingMetadata } from 'next';
+import { notFound } from 'next/navigation';
 import Script from 'next/script';
+import { getDocumentBySlug } from 'outstatic/server';
 import Markdown from 'react-markdown';
 
 import CodeSection from '@/app/blog/[slug]/code-section';
@@ -21,22 +23,34 @@ export async function generateMetadata(
   const params = await props.params;
   const blogSlug = params.slug;
 
-  const blogPost = await getPostContent(blogSlug);
+  const blogPost = getDocumentBySlug('posts', blogSlug, [
+    'title',
+    'publishedAt',
+    'slug',
+    'author',
+    'content',
+    'cover',
+    'tags',
+  ]);
+
+  // if (!blogPost) {
+  //   return notFound();
+  // }
 
   return {
-    title: blogPost.title,
+    title: blogPost?.title,
     openGraph: {
-      images: [blogPost.cover],
+      images: [blogPost?.cover as string],
     },
     authors: [
       {
         name: 'Kelvin Amoaba',
-        url: 'https://kelvinamoaba.live',
+        url: 'https://kelvinamoaba.com',
       },
     ],
-    keywords: [...blogPost.tags],
+    keywords: [...((blogPost?.tags as string[]) || [])],
     creator: 'Kelvin Amoaba',
-    description: blogPost.content
+    description: blogPost?.content
       .replace(/<[^>]*>/g, '')
       // remove #, ##, ###, etc
       .replace(/#+\s/g, '')
@@ -64,23 +78,34 @@ const getPostContent = async (slug: string) => {
 
 const BlogDetailPage = async (props0: Props) => {
   const params = await props0.params;
-  const postContent = await getPostContent(params.slug);
+  // const postContent = await getPostContent(params.slug);
+
+  const post = getDocumentBySlug('posts', params.slug, [
+    'title',
+    'publishedAt',
+    'slug',
+    'author',
+    'content',
+    'cover',
+  ]);
+
+  if (!post) {
+    return notFound();
+  }
 
   return (
     <div className="px-5 mx-auto max-w-3xl">
       <BackButton className="mt-10" />
-      <div className="mt-10 text-xl font-bold md:text-3xl">
-        {postContent.title}
-      </div>
+      <div className="mt-10 text-xl font-bold md:text-3xl">{post.title}</div>
       <div className="mt-2 text-sm text-gray-500">
-        Kelvin Amoaba • {new Date(postContent.date).toLocaleDateString()}
+        Kelvin Amoaba • {new Date(post.publishedAt).toLocaleDateString()}
       </div>
-      {postContent.cover && (
+      {(post.cover as string) && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={postContent.cover}
+          src={post.cover as string}
           className="mt-10 rounded-md"
-          alt={postContent.title}
+          alt={post.title}
         />
       )}
       <div className="mt-10 space-y-10 max-w-3xl font-light leading-6 prose text-black/90 dark:prose-invert">
@@ -140,7 +165,7 @@ const BlogDetailPage = async (props0: Props) => {
             },
           }}
         >
-          {postContent.content}
+          {post.content}
         </Markdown>
 
         <Script
